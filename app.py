@@ -55,13 +55,16 @@ if authentication_status:
     selected_model = st.sidebar.selectbox("Select the fuel type", ['Petrol', 'Diesel', 'LPG', 'Kerosene', 'MGO'])
 
     st.sidebar.subheader("Input Features:")
-    mgo_local = st.sidebar.number_input("MGO LOCAL (GHp/Lt)")
-    kerosene = st.sidebar.number_input("KEROSENE (GHp/Lt)")
+    #mgo_local = st.sidebar.number_input("MGO LOCAL (GHp/Lt)")
+    #kerosene = st.sidebar.number_input("KEROSENE (GHp/Lt)")
     #lpg = st.sidebar.number_input("LPG (GHp/Kg)")
 
     # Depending on the selected fuel type, choose the appropriate input features
     if selected_model == 'Petrol':
         diesel = st.sidebar.number_input("DIESEL (GHp/Lt)")
+        lpg = st.sidebar.number_input("LPG (GHp/Kg)")
+        kerosene = st.sidebar.number_input("KEROSENE (GHp/Lt)")
+        mgo_local = st.sidebar.number_input("MGO LOCAL (GHp/Lt)")
         user_input = np.array([[mgo_local, kerosene, lpg, diesel]])
         prediction_model = models['Petrol']
 
