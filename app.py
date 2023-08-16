@@ -57,7 +57,7 @@ if authentication_status:
     st.sidebar.subheader("Input Features:")
     mgo_local = st.sidebar.number_input("MGO LOCAL (GHp/Lt)")
     kerosene = st.sidebar.number_input("KEROSENE (GHp/Lt)")
-    lpg = st.sidebar.number_input("LPG (GHp/Kg)")
+    #lpg = st.sidebar.number_input("LPG (GHp/Kg)")
 
     # Depending on the selected fuel type, choose the appropriate input features
     if selected_model == 'Petrol':
