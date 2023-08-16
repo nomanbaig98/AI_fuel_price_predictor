@@ -13,7 +13,7 @@ st.set_page_config(
 )
 
 # --- USER AUTHENTICATION ---
-names = ["Josh Pettingill", "David Bender", "Roy Franco"]
+names = ["Josh Pettingill", "Octava AI", "Roy Franco"]
 usernames = ["jpett", "dbend", "rfranc"]
 
 
@@ -21,6 +21,8 @@ usernames = ["jpett", "dbend", "rfranc"]
 file_path = Path(__file__).parent / "hashed_pw.pkl"
 with file_path.open("rb") as file:
     hashed_passwords = pickle.load(file)
+
+
 
 authenticator = stauth.Authenticate(names, usernames, hashed_passwords,
     "sales_dashboard", "abcdef", cookie_expiry_days=30)
