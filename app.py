@@ -95,6 +95,8 @@ if authentication_status:
     elif selected_model == 'MGO':
         diesel = st.sidebar.number_input("DIESEL (GHp/Lt)")
         petrol = st.sidebar.number_input("PETROL (GHp/Lt)")
+        lpg = st.sidebar.number_input("LPG (GHp/Kg)")
+        kerosene = st.sidebar.number_input("KEROSENE (GHp/Lt)")
         user_input = np.array([[kerosene, lpg, diesel, petrol]])
         prediction_model = models['MGO']
 
